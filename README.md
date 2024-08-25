@@ -39,6 +39,29 @@ Display Result: The detected color name is displayed on the interface.
 Color Database
 The model uses a color database containing over 1000 named colors, ensuring accurate color detection across a wide spectrum.
 
+# Code
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.models import load_model
+import numpy as np
+
+
+color_model = load_model('/Users/abhinavyadav/Downloads/KaggleModel/color_classification_model.h5')
+
+# Load and preprocess the image
+img_path = '/Users/abhinavyadav/Downloads/KaggleTesting/light-orange-color-wall-texture.jpeg'
+img = image.load_img(img_path, target_size=(64, 64))  # Adjust size as needed
+img_array = image.img_to_array(img)
+img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
+img_array = img_array / 255.0  # Normalize if needed
+
+
+
+# Make predictions
+predictions = color_model.predict(img_array)
+
+# If you have a classification model
+predicted_class = np.argmax(predictions[0])  # Use this for classification
+
 
 # 🖥️ Usage
 You can use this model in your own projects, such as:
@@ -49,11 +72,8 @@ Photography: Identify and use specific colors in your photos.
 Web Integration Example
 You can easily integrate this model into your web applications using Flask or Django:
 
-# Deploy
-@app.route('/detect_color', methods=['POST'])
-def detect_color():
-    # Process the image and detect color
-    ...
+
+
 💡 Tips for Best Results
 Ensure that the images have good lighting to get the most accurate color detection.
 When dealing with gradients or mixed colors, the model will return the most dominant color in the pixel.
