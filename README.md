@@ -26,7 +26,7 @@ git clone https://github.com/abhinavyadav11/colordetection.git
 cd colordetectionmodel
 Run the Model
 #
-python color_detection.py
+Download the model to use it.
 #
 # 📝 How It Works
 Load the Image: The model takes an image as input.
