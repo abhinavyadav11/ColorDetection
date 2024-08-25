@@ -23,10 +23,13 @@ pip install numpy opencv-python matplotlib
 Clone the Repository
 #
 git clone https://github.com/abhinavyadav11/colordetection.git
+
 cd colordetectionmodel
+
 Run the Model
 #
 Download the model to use it.
+model : https://github.com/abhinavyadav11/ColorDetection/blob/main/color_classification_model.h5
 #
 # 📝 How It Works
 Load the Image: The model takes an image as input.
