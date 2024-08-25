@@ -62,6 +62,11 @@ predictions = color_model.predict(img_array)
 # If you have a classification model
 predicted_class = np.argmax(predictions[0])
 
+# For classification: map the predicted class to a label
+class_labels = ['black', 'blue', 'brown', 'green', 'grey', 'orange', 'red', 'violet', 'white', 'yellow']  # Replace with your actual class labels
+predicted_label = class_labels[predicted_class]
+print(f'Predicted Label: {predicted_label}')
+
 
 # 🖥️ Usage
 You can use this model in your own projects, such as:
