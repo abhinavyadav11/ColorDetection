@@ -28,7 +28,7 @@ cd colordetectionmodel
 
 Run the Model
 #
-Download the model to use it.
+Download the model to use it
 model : https://github.com/abhinavyadav11/ColorDetection/blob/main/color_classification_model.h5
 #
 # 📝 How It Works
