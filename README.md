@@ -22,9 +22,9 @@ Make sure you have Python 3.x installed. You'll also need the following librarie
 pip install numpy opencv-python matplotlib
 Clone the Repository
 #
-git clone https://github.com/abhinavyadav11/colordetection.git
+git clone https://github.com/abhinavyadav11/ColorDetection.git
 
-cd colordetectionmodel
+cd ColorDetection
 
 Run the Model
 #
@@ -59,10 +59,10 @@ img_array = img_array / 255.0  # Normalize if needed
 # Make predictions
 predictions = color_model.predict(img_array)
 
-# If you have a classification model
+
 predicted_class = np.argmax(predictions[0])
 
-# For classification: Map the predicted class to a label
+
 class_labels = ['black', 'blue', 'brown', 'green', 'grey', 'orange', 'red', 'violet', 'white', 'yellow']  # Replace with your actual class labels
 predicted_label = class_labels[predicted_class]
 print(f'Predicted Label: {predicted_label}')
